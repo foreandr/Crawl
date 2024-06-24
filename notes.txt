@@ -1,1 +1,4 @@
-https://channelcrawl.com/
+[1]: https://channelcrawl.com/
+[2]: in some cases
+    https://www.youtube.com/watch?v=GO0DuQWgwII&ab_channel=LibertyVault
+       i can extract the channel from the url

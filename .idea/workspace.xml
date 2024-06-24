@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d2b2d51-202b-467b-8416-47382556ec35" name="Changes" comment="test push">
-      <change afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Crawl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Crawl.iml" afterDir="false" />
+    <list default="true" id="1d2b2d51-202b-467b-8416-47382556ec35" name="Changes" comment="some minor changes, gotta see if I can change the Ui this sis awful">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawl_rumble.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl_rumble.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawl_youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl_youtube.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/req.txt" beforeDir="false" afterPath="$PROJECT_DIR$/req.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.crawl_rumble.executor": "Run",
+    "Python.crawl_youtube.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -59,7 +57,7 @@
       <recent name="C:\Users\AndreForeman\PycharmProjects\Crawl" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.crawl_rumble">
+  <component name="RunManager" selected="Python.crawl_youtube">
     <configuration name="crawl_rumble" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Crawl" />
       <option name="ENV_FILES" value="" />
@@ -74,6 +72,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_rumble.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="crawl_youtube" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Crawl" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl_youtube.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -106,6 +126,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.crawl_youtube" />
         <item itemvalue="Python.crawl_rumble" />
       </list>
     </recent_temporary>
@@ -150,7 +171,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719235514601</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="some minor changes, gotta see if I can change the Ui this sis awful">
+      <option name="closed" value="true" />
+      <created>1719261982308</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719261982308</updated>
+    </task>
+    <task id="LOCAL-00005" summary="some minor changes, gotta see if I can change the Ui this sis awful">
+      <option name="closed" value="true" />
+      <created>1719261992330</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719261992330</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,7 +203,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test push" />
-    <option name="LAST_COMMIT_MESSAGE" value="test push" />
+    <MESSAGE value="some minor changes, gotta see if I can change the Ui this sis awful" />
+    <option name="LAST_COMMIT_MESSAGE" value="some minor changes, gotta see if I can change the Ui this sis awful" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -175,11 +213,6 @@
           <url>file://$PROJECT_DIR$/functions.py</url>
           <line>1</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/crawl_rumble.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

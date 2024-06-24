@@ -115,7 +115,7 @@ def get_urls_from_list_of_urls(driver, posts, total):
             elapsed_time_posts = time.time() - start_time_posts
             progress_posts = (i / total) * 100
             loc_prog = time.time() - start
-            print(f"[{i} / {total}][TOT:{progress_posts:.2f}][LOC:{loc_prog:.2f}][all_urls: {len(all_urls)}]")
+            print(f"[{i} / {total}][:{progress_posts:.2f}%][TOT:{elapsed_time_posts:.2f}][LOC:{loc_prog:.2f}][all_urls: {len(all_urls)}]")
             start = time.time()
 
     return list(set(all_urls))
