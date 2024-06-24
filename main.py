@@ -1,10 +1,11 @@
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-#!
+import crawl_rumble
+import functions
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    number = 52139
+    percentage = 5
+    result = int((percentage / 100) * number)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print(result)
+
+    print("TEST")
