@@ -13,7 +13,7 @@ def is_channel_template(url):
     # Pattern to match YouTube channel URLs including @ sign
     channel_pattern = r'^https?://(?:www\.)?youtube\.com/(?:c(?:hannel)?/|@)?[A-Za-z0-9_-]+(?:/|$)'
     return bool(re.search(channel_pattern, url))
-def main():
+def main():# 1
     time.sleep(3)
     soup = functions.get_driver_soup(driver)
     urls = functions.get_all_youtube_urls(soup)
