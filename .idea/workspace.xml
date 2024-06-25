@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d2b2d51-202b-467b-8416-47382556ec35" name="Changes" comment="some minor changes, gotta see if I can change the Ui this sis awful">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawl_rumble.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl_rumble.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawl_youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl_youtube.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
