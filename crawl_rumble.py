@@ -39,7 +39,7 @@ def parition_rumble_links(urls):
 def init_crawl_rumble():
     global driver
     soup = functions.get_driver_soup(driver)
-    urls = functions.get_all_urls(soup)
+    urls = functions.get_all_rumble_urls(soup)
     if len(urls) == 0:
         init_crawl_rumble()
 

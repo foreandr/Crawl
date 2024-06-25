@@ -16,9 +16,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 urls_crawled = []
 
 
-def test_log(text_to_write):
+def test_log(text_to_write, append_or_wipe):
     file_path = './test.txt'
-    with open(file_path, 'a', encoding='utf-8') as file:
+    with open(file_path, append_or_wipe, encoding='utf-8') as file:
         file.write(f"{str(text_to_write)}\n")
 
 
@@ -32,18 +32,12 @@ def get_soup(url):
     headers = {
         'User-Agent': random.choice(user_agents),
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate, br',
     }
 
     try:
         response = requests.get(url, headers=headers, timeout=10)
-        print("response", response)
-
         response.raise_for_status()  # Raises a HTTPError if the status is 4xx, 5xx
-
         html = response.text
-        print("html", html)
         soup = BeautifulSoup(html, 'html.parser')
         return soup
 
@@ -76,21 +70,33 @@ def open_site_selenium(site, show_browser=False):
     return driver
 
 
-def get_all_urls(soup):
-    urls = []
+def get_all_hrefs(soup):
+    hrefs = []
     for link in soup.find_all('a'):
         try:
             href = link.get('href')
-            if "http" in href:
-                urls.append(href)
-            else:
-                urls.append(f"https://rumble.com{href}")
+            hrefs.append(href)
         except Exception as e:
             # print("ERROR CRAWLING", e, href)
             continue
 
+    return hrefs
+
+def get_all_rumble_urls(soup):
+    hrefs = get_all_hrefs(soup)
+    urls = []
+    for href in hrefs:
+        urls.append(f"https://rumble.com{href}")
+
     return urls
 
+def get_all_youtube_urls(soup):
+    hrefs = get_all_hrefs(soup)
+    urls = []
+    for href in hrefs:
+        urls.append(f"https://youtube.com{href}")
+
+    return urls
 
 def get_urls_from_list_of_urls(driver, posts, total):
     start_time_posts = time.time()
