@@ -16,7 +16,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 urls_crawled = []
 
 
-def test_log(text_to_write, append_or_wipe):
+def test_log(text_to_write, append_or_wipe='a'):
     file_path = './test.txt'
     with open(file_path, append_or_wipe, encoding='utf-8') as file:
         file.write(f"{str(text_to_write)}\n")
@@ -82,19 +82,13 @@ def get_all_hrefs(soup):
 
     return hrefs
 
-def get_all_rumble_urls(soup):
+
+
+def get_all_typed_urls(soup, site_type):
     hrefs = get_all_hrefs(soup)
     urls = []
     for href in hrefs:
-        urls.append(f"https://rumble.com{href}")
-
-    return urls
-
-def get_all_youtube_urls(soup):
-    hrefs = get_all_hrefs(soup)
-    urls = []
-    for href in hrefs:
-        urls.append(f"https://youtube.com{href}")
+        urls.append(f"https://{site_type}.com{href}")
 
     return urls
 

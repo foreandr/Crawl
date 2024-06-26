@@ -12,7 +12,6 @@ def is_channel_template(url):
     pattern = r'\/c\/[A-Za-z0-9]+$'
     return bool(re.search(pattern, url))
 
-
 def is_video_template(url):
     pattern = r'\/v[0-9a-z]{4,10}-[a-z0-9-.]+(?:\.html)?$'
     return bool(re.search(pattern, url))
