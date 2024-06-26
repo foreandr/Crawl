@@ -32,6 +32,7 @@ def partition_data(urls):
 
 def crawler(all_urls):
     #TODO: i want this to be multithreaded
+    #TODO detect whether use soup ro driver based on site
     new_urls = []
 
     total = len(all_urls)
