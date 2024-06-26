@@ -2,7 +2,7 @@ import functions
 from urllib.parse import urlparse
 import re
 import time
-import hyperSel
+import hyperSel # 11
 
 initial_link = 'https://snse.ca'
 driver = functions.open_site_selenium(initial_link)
