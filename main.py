@@ -37,18 +37,15 @@ def crawler(all_urls):
     fifth_percentage = max(int((5 / 100) * len(all_urls)), 1)
     start_time_posts = time.time()
     start = time.time()
-
+    
     for i, url in enumerate(all_urls, 1):
         if not db.can_scrape(url):
             print("SCRAPED TOO RECENTLY", url)
             continue
-
-
         site_type = get_website_name(url)
-        functions.add_url(url)
 
         driver.get(url)
-        time.sleep(2)
+        time.sleep(0.5)
 
         # GET CONTENT
         soup = hyperSel.get_driver_soup(driver)
@@ -70,6 +67,11 @@ def crawler(all_urls):
             loc_prog = time.time() - start
             print(f"[{i} / {total}][:{progress_posts:.2f}%][TOT:{elapsed_time_posts:.2f}][LOC:{loc_prog:.2f}][all_urls: {len(all_urls)}]")
             start = time.time()
+
+    current_urls = functions.get_all_urls()
+    for url in new_urls:
+        if url not in current_urls:
+            functions.add_url(url)
 
     crawler(new_urls)
 

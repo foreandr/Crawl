@@ -14,6 +14,14 @@ def add_url(url):
     with open(file_path, 'a', encoding='utf-8') as file:
         file.write(f"{str(url)}\n")
 
+def get_all_urls():
+    file_path = './urls.txt'
+    urls = []
+    with open(file_path, 'r', encoding='utf-8') as file:
+        for line in file:
+            urls.append(line.strip())
+    return urls
+
 def get_soup(url):
     # List of common user agents
     user_agents = [
