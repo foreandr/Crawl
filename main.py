@@ -31,6 +31,7 @@ def partition_data(urls):
     return content, channels
 
 def crawler(all_urls):
+    #TODO: i want this to be multithreaded
     new_urls = []
 
     total = len(all_urls)
@@ -44,7 +45,11 @@ def crawler(all_urls):
             continue
         site_type = get_website_name(url)
 
-        driver.get(url)
+        try:
+            driver.get(url)
+        except Exception as e:
+            print("FAILED TO GET URL SKIPPING", e)
+            continue
         time.sleep(0.5)
 
         # GET CONTENT

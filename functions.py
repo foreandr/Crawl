@@ -10,10 +10,13 @@ def test_log(text_to_write, append_or_wipe='a'):
         file.write(f"{str(text_to_write)}\n")
 
 def add_url(url):
-    file_path = './urls.txt'
-    with open(file_path, 'a', encoding='utf-8') as file:
-        file.write(f"{str(url)}\n")
-
+    try:
+        file_path = './urls.txt'
+        with open(file_path, 'a', encoding='utf-8') as file:
+            file.write(f"{str(url)}\n")
+    except Exception as e:
+        print("FAILED TO ADD URL")
+        
 def get_all_urls():
     file_path = './urls.txt'
     urls = []
