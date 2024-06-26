@@ -30,7 +30,6 @@ def partition_data(urls):
         
     return content, channels
 
-
 def crawler(all_urls):
     new_urls = []
 
@@ -44,10 +43,9 @@ def crawler(all_urls):
             print("SCRAPED TOO RECENTLY", url)
             continue
 
+
         site_type = get_website_name(url)
-        # print("SCRAPING URL", url)
-
-
+        functions.add_url(url)
 
         driver.get(url)
         time.sleep(2)

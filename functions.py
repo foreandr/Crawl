@@ -9,6 +9,11 @@ def test_log(text_to_write, append_or_wipe='a'):
     with open(file_path, append_or_wipe, encoding='utf-8') as file:
         file.write(f"{str(text_to_write)}\n")
 
+def add_url(url):
+    file_path = './urls.txt'
+    with open(file_path, 'a', encoding='utf-8') as file:
+        file.write(f"{str(url)}\n")
+
 def get_soup(url):
     # List of common user agents
     user_agents = [
