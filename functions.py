@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 import time
+import psutil
 
 def test_log(text_to_write, append_or_wipe='a'):
     file_path = './test.txt'
@@ -68,3 +69,18 @@ def get_all_typed_urls(soup, site_type):
 
     return urls
 
+def get_ram_percentage():
+    return int(str(psutil.virtual_memory().percent).split(".")[0])
+
+def ram_checker(max_ram):
+    tries = 0
+    while True:
+        if get_ram_percentage() >= max_ram:
+            print("RAM TOO HIGH, SLOWLY DOWN..")
+            time.sleep(60)
+            tries +=1
+        else:
+            break
+        
+    if tries >= 10:
+        print("TRIES:" ,tries)

@@ -4,3 +4,4 @@ lxml~=5.2.2
 selenium
 webdriver-manager
 hypersel
+psutil
